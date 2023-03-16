@@ -1,0 +1,17 @@
+<div class="margem">
+    <form>
+        <h2 class="text-primary">Login</h2>
+        <div *ngIf="invalidLogin" class="alert alert-danger">Usuário ou senha inválidos.</div>
+
+        <div class="mb-3">
+            <label>Username</label>
+            <input type="text" [(ngModel)]="credentials.username" name="username" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label >Password</label>
+            <input type="password" [(ngModel)]="credentials.password" name="password" class="form-control" required>
+        </div>
+        <button class="btn btn-primary" (click)="login(credentials)">Log in</button>
+    </form>
+</div>

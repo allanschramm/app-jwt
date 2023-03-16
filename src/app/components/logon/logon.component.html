@@ -1,0 +1,17 @@
+<div class="margem">
+    <h2 class="text-primary text-center">Efetuar Login</h2>
+    <form>
+        <div *ngIf="erro" class="alert alert-danger">{{erro}}</div>
+
+        <div class="mb-3">
+            <label>Usuário:</label>
+            <input type="text" [(ngModel)]="user.nome" name="nome" class="form-control"/>
+        </div>
+
+        <div class="mb-3">
+            <label >Senha:</label>
+            <input type="password" [(ngModel)]="user.senha" name="senha" class="form-control"/>
+        </div>
+        <button class="btn btn-primary" (click)="validar(user)">Logon</button>
+    </form>
+</div>
